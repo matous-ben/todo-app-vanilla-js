@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Simple single-page to-do list application">
+    <title>To-Do App | matous-ben</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="app-header">
+            <h1>📝 My To-Do List</h1>
+            <p class="subtitle">Stay organized, stay productive</p>
+        </header>
+
+        <!-- Input Section -->
+        <section class="input-section">
+            <form id="todo-form" class="todo-form">
+                <input 
+                    type="text" 
+                    id="todo-input" 
+                    class="todo-input" 
+                    placeholder="What needs to be done?"
+                    aria-label="New task input"
+                    required
+                    autofocus
+                >
+                <button type="submit" class="btn btn-add" aria-label="Add task">
+                    Add Task
+                </button>
+            </form>
+        </section>
+
+        <!-- Filter Section -->
+        <section class="filter-section">
+            <div class="filter-buttons">
+                <button class="btn-filter active" data-filter="all">All</button>
+                <button class="btn-filter" data-filter="active">Active</button>
+                <button class="btn-filter" data-filter="completed">Completed</button>
+            </div>
+            <p class="task-count">
+                <span id="task-count">0</span> tasks remaining
+            </p>
+        </section>
+
+        <!-- Todo List Section -->
+        <section class="todo-section">
+            <ul id="todo-list" class="todo-list">
+                <!-- Tasks will be dynamically added here by JavaScript -->
+            </ul>
+        </section>
+
+        <!-- Empty State (shown when no tasks) -->
+        <div id="empty-state" class="empty-state">
+            <p>🎉 No tasks yet!  Add one above to get started. </p>
+        </div>
+    </div>
+
+    <footer class="app-footer">
+        <p>Built by <a href="https://github.com/matous-ben" target="_blank">@matous-ben</a> | 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
